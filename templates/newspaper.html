@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAILY NEWSPAPERS </title>
+
+
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;  
+  /* The image used */
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../static/images/3.jpg");
+
+  /* Full height */
+  height: 138%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #041203;
+}
+
+.aed .fa
+
+{
+	margin-right: 8px;
+}
+
+.button1
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #FFA500;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+			background-color: #FFEFD5;
+}
+
+.button2
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #00BFFF;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+
+			background-color: #FFEFD5;
+}
+
+
+.button3
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #006400;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+			background-color: #FFEFD5;
+
+}
+
+.button4
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #8B4513;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+
+			background-color: #FFEFD5;
+}
+
+
+
+.button5
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #008080;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+
+			background-color: #FFEFD5;
+}
+
+
+.button6
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #800080;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+
+			background-color: #FFEFD5;
+}
+
+
+.button7
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #00008B;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+
+			background-color: #FFEFD5;
+}
+
+
+.button8
+{
+
+			position: relative;
+			text-align: center;
+			width: 340px;
+			padding: 10px;
+			font-size: 25px;
+			color: #15f4ee;
+			font-family: poppins;
+			font-weight: 200;
+			border:10px solid #800000;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			cursor: pointer;
+			border-radius: 30px;
+			transition: 1.5s;
+			background-color: #FFEFD5;
+
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+	<div class="aed">
+
+		<ul>
+
+				<li class="active"><a href="{{url_for('user')}}"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+				<li><a href="{{url_for('newspaper')}}">NEWSPAPERS</a></li>
+				<li><a href="{{url_for('ebooks')}}">E-BOOKS</a></li>
+				<li><a href="{{url_for('about')}}">ABOUT</a></li>
+
+			<!--	<li><a href="#">DIGI.CALCULATOR</a></li> -->
+
+				<li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+
+				
+		</ul>
+	</div>
+	<div class="title">
+		<h1><font size="7" color="#ADD8E6">DAILY NEWSPAPERS</font></h1>
+	</div>
+      		<button class="button1"><a href="https://www.newspaperpdf.online/thehindu.php" class="btn"><font size="7" color="#FF8C00">THE HINDU</font></a></button><br><br>
+     
+			<button class="button2"><a href="https://www.newspaperpdf.online/hindustan_times.php" class="btn"><font size="7" color="#00BFFF">HINDUSTAN TIMES</font></a></button><br><br>
+
+			<button class="button3"><a href="https://www.newspaperpdf.online/times_of_india.php" class="btn"><font size="7" color="#006400">THE TIMES OF INDIA</font></a></button><br><br>
+
+			<button class="button4"><a href="https://www.newspaperpdf.online/indian_express.php"><font size="7" color="#8B4513">INDIAN EXPRESS</font></a></button><br><br>
+
+			<button class="button5"><a href="https://www.newspaperpdf.online/dainik_jagran.php"><font size="7" color="#008080">DAINIK JAGRAN</font></a></button><br><br>
+
+			<button class="button6"><a href="https://www.newspaperpdf.online/jansatta.php"><font size="7" color="#800080">JANSATTA</font></a></button><br><br>
+
+			<button class="button7"><a href="https://www.newspaperpdf.online/economic_times.php"><font size="7" color="#00008B">ECONOMIC TIMES</font></a></button><br><br>
+
+			<button class="button8"><a href="https://www.newspaperpdf.online/financial_express.php"><font size="7" color="#800000">FINANCIAL EXPRESS</font></a></button><br><br>
+
+
+</body>
+</html>

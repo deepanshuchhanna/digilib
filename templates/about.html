@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>about</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;  
+  /* The image used */
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../static/images/7.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+}
+
+ul li{
+  display: inline-block;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.6s ease;
+}
+
+ul li a:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+ul li.active a{
+  background-color: #fff;
+  color: #041203;
+}
+
+.acd .fa
+
+{
+  margin-right: 8px;
+}
+</style>
+
+</head>
+
+<body>
+
+  <div class="acd">
+
+    <ul>
+        <li class="active"><a href="{{url_for('user')}}"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+        <li><a href="{{url_for('newspaper')}}">NEWSPAPERS</a></li>
+        <li><a href="{{url_for('ebooks')}}">E-BOOKS</a></li>
+        <li><a href="{{url_for('about')}}">ABOUT</a></li>
+
+     <!--   <li><a href="#">DIGI.CALCULATOR</a></li>  -->
+
+        <li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+
+        
+    </ul>
+  </div>
+
+  <div style="padding: 20px; ">
+
+<p>
+<font size="7" color="white">
+  ABOUT US:
+</font>
+</p>
+
+
+<p style="padding: 5px;"> 
+<font size="6" color="#ADD8E6">
+  &nbspHey..... Users! I am Deepanshu Chhanna founder of this Digi Library.This website is not an official library website and this website is handle by Admin
+  of this library.In this Digi. library, we provide you the notes and books in the form &nbsp of pdf and we also provides you the links of somebooks by that you can download,read 
+  or purschase the books as  you all know that this digital library so,we provide you the study material digitally.
+</font>
+</p>
+
+
+<p>
+<font size="6" color="#ADD8E6">
+
+  <span style="color: black;">*</span>  This library contains the  daily News paper and Magazine's digitally in pdf form.
+</font>
+</p>
+
+
+<p>
+<font size="6" color="#ADD8E6">
+
+  <span style="color: black;">*</span> This library contains previous year Question Papers of all Semester's for B-tech students and the students who are  &nbsp &nbsp preparing for UPSC.
+</font>
+</p>
+
+
+<p>
+<font size="6" color="#ADD8E6">
+<span style="color: black;">*</span> Anyone can contact to us by for any queries and as we have provided Contact slot in our website.
+</font>
+</p>
+
+
+<p>
+<font size="7" color="whitesmoke">
+THANK YOU!
+</font>
+</p>
+
+
+<p>
+<font size="5" color="whitesmoke">
+ADMIN
+</font>
+
+<font size="5" color=" white" style="font-weight: bold">
+:
+</font>
+
+
+
+<font size="5" color="#ADD8E6" style="font-weight:bold">
+DEEPANSHU CHHANNA
+</font>
+</p> 
+</div>
+
+
+
+</body>
+</html>

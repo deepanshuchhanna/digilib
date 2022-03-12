@@ -1,0 +1,1299 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>ebooks</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../static/images/8.jpg");
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+			font-family: sans-serif;
+		}
+
+		.menu-bar
+		{
+			background: rgb(2,1,50);     /* r= red,g=green,b=blue*/
+			text-align: center;
+		}
+
+		.menu-bar ul
+		{
+			display: inline-flex;
+			list-style: none;
+			color: #F0F8FF;
+
+		}
+		
+
+		.menu-bar ul li
+		{
+			width: 120px;
+			margin: 15px;
+			padding: 15px;
+		}
+
+		.menu-bar ul li a
+		{
+			text-decoration: none;
+		    color: #ADD8E6;
+		 
+		}
+
+		.active, .menu-bar ul li:hover
+		{
+			background:rgba(7, 100, 7, 0.568);
+			border-radius: 5px;
+			
+
+		}
+
+		.menu-bar .fa
+		{
+			margin-right: 8px;
+		}
+
+											/* style for B-tech Course*/
+
+		.sub-menu1
+		{
+			display: none;
+
+		}
+
+		.menu-bar ul li:hover .sub-menu1
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -15px;
+			
+		}
+
+		.menu-bar ul li:hover .sub-menu1 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu1 ul li
+		{
+			width: 70px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: left;
+		}
+
+
+											/* style for B-TECH years */
+
+		.year
+		{
+			display: none;
+		}
+
+		.sub-menu1 ul li:hover .year
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 10px;
+			margin-left: 40px;
+		}
+
+		.sub-menu1 ul li:hover .year ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu1 ul li:hover .year ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+										/*style for btech 1st yr. subjects*/
+		.subject1
+		{
+			display: none;
+		}
+
+		.year ul li:hover .subject1
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,190);
+			margin-top: 10px;
+			margin-left: 50px;
+		}
+
+		.year ul li:hover .subect1 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.year ul li:hover .subject1 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+											/*style for btech- cse 2nd yr. subjects*/
+		.subjectcse2
+		{
+			display: none;
+		}
+
+		.year ul li:hover .subjectcse2
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,190);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.year ul li:hover .subectcse2 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.year ul li:hover .subjectcse2 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+												/*style for btech- cse 3nd yr. subjects*/
+		.subjectcse3
+		{
+			display: none;
+		}
+
+		.year ul li:hover .subjectcse3
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,190);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.year ul li:hover .subectcse3 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.year ul li:hover .subjectcse3 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+												/*style for btech- cse 3nd yr. subjects - Electives*/
+		.elective
+		{
+			display: none;
+		}
+
+		.subjectcse3 ul li:hover .elective 
+		{
+			display: block;
+			position: absolute;
+			background: rgb(11,73,242);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.subjectcse3 ul li:hover .elective  ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.subjectcse3 ul li:hover .elective ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+												/*style for btech- cse 3nd yr. subjects - HONOURS*/
+		.honour
+		{
+			display: none;
+		}
+
+		.subjectcse3 ul li:hover .honour 
+		{
+			display: block;
+			position: absolute;
+			background: rgb(11,73,242);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.subjectcse3 ul li:hover .honour  ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.subjectcse3 ul li:hover .honour ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+
+											/* style for B.SC course*/
+		.sub-menu2
+		{
+			display: none;
+
+		}
+
+		.menu-bar ul li:hover .sub-menu2
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu2 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu2 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+														/*style for b.sc years */
+
+
+
+		.year1
+		{
+			display: none;
+		}
+
+		.sub-menu2 ul li:hover .year1
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.sub-menu2 ul li:hover .year1 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu2 ul li:hover .year1 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+												/* style for M-TECH course*/
+		.sub-menu4
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .sub-menu4
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu4 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu4 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+												/*style for M-TECH course */
+
+	.year2
+		{
+			display: none;
+		}
+
+		.sub-menu4 ul li:hover .year2
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.sub-menu4 ul li:hover .year2 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu4 ul li:hover .year2 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+													/* style for M.SC course*/
+
+		.sub-menu6
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .sub-menu6
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu6 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu6 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+													/*STYLE FOR M.SC YEARS*/
+		.year3
+		{
+			display: none;
+		}
+
+		.sub-menu6 ul li:hover .year3
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.sub-menu6 ul li:hover .year3 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu6 ul li:hover .year3 ul li 
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+														/*style for UPSC */
+		.sub-menu7
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .sub-menu7
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu7 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu7 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+													/* style for upse= stage-I */
+		.paper1
+		{
+			display: none;
+		}
+
+		.sub-menu7 ul li:hover .paper1
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 10px;
+			margin-left: 55px;
+		}
+
+		.sub-menu7 ul li:hover .paper1 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu7 ul li:hover .paper1 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+													/* style for upse= stage-II*/
+		.paper2
+		{
+			display: none;
+		}
+
+		.sub-menu7 ul li:hover .paper2
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 10px;
+			margin-left: 55px;
+		}
+
+		.sub-menu7 ul li:hover .paper2 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu7 ul li:hover .paper2 ul li 
+		{
+			width: 105px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+													/*style for BBA YEARS*/
+
+		.year4
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .year4
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .year4 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .year4 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+
+													/*style for MBA YEARS*/
+
+		.year5
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .year5
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .year5 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .year5 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+
+													/* FOR SSC EXAMS SUB-MENU8*/
+
+		.sub-menu8
+		{
+			display: none;
+		}
+
+		.menu-bar ul li:hover .sub-menu8
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,80);
+			margin-top: 15px;
+			margin-left: -10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu8 ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.menu-bar ul li:hover .sub-menu8 ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+												/* STYLE  FOR SSC-CHSL EXAM TIERS */ 
+
+		.exams
+		{
+			display: none;
+		}
+
+		.sub-menu8 ul li:hover .exams
+		{
+			display: block;
+			position: absolute;
+			background: rgb(2,1,130);
+			margin-top: 15px;
+			margin-left: 70px;
+		}
+
+		.sub-menu8 ul li:hover .exams ul
+		{
+			display: block;
+			margin: 10px;
+		}
+
+		.sub-menu8 ul li:hover .exams ul li
+		{
+			width: 90px;
+			padding: 10px;
+			border-bottom: 1px #ADD8E6;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+
+
+
+	</style>
+
+</head>
+	<body>
+		<div class="menu-bar">
+			<ul>
+
+				<li class="active"><a href="{{url_for('user')}}"><i class="fa fa-home"></i>HOME</a></li>
+
+				<!-- FOR BTECH COURSE -->
+
+				<li><a href="#">B-Tech</a>
+					<div class="sub-menu1">
+
+						<ul>
+		<!-- ***-->			 <li><a href="#">C.S.E</a>
+																				<!--FOR CSE YEARS -->
+								<div class="year">
+									<ul>
+
+										<li><a href="#">1st YEAR</a>
+
+																				<!-- FOR CSE- 1st yr. SUbjects -->
+											<div class="subject1">
+												<ul>
+													<!-- <li><a href="./books/physics.html">PHYSICS</a></li> -->
+													<li><a href="{{url_for('physics')}}">PHYSICS</a></li>
+													
+
+													<li><a href="{{url_for('chemistry')}}">CHEMISTY</a></li>
+
+													<li><a href="{{url_for('bee')}}">BEE</a></li>
+													<li><a href="{{url_for('pps')}}">PPS</a></li>
+
+													<li><a href="{{url_for('math')}}">MATH-I</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">2st YEAR</a>
+
+																					<!-- FOR CSE 2nd Yr. Subjects -->
+											<div class="subjectcse2">
+												<ul>
+													<li><a href="#">DAA</a></li>
+													<li><a href="#">DSD</a></li>
+													<li><a href="#">MATH-2</a></li>
+													<li><a href="#">CAO</a></li>
+													<li><a href="#">OS</a></li>
+												</ul>
+
+											</div>
+										</li>
+
+										<li><a href="#">3st YEAR</a>
+
+																					<!-- FOR CSE 3rd YR. SUBJECTS -->
+											<div class="subjectcse3">
+												<ul>
+													
+													<li><a href="#">TOC</a></li>
+													<li><a href="#">DBMS</a></li>
+													<li><a href="#">CN</a></li>
+												    <li><a href="#">OOPS</a></li>
+												    <li><a href="#">Electives</a>
+
+												    								<!-- for cse 3RD YR. subjects -elective -->
+												    	<div class="elective">
+												    		<ul>
+												    			<li><a href="#">P.L</a></li>
+
+												    			<li><a href="#">Wire Comm.</a></li>
+												    		</ul>
+												    		
+												    	</div>
+												    </li>
+												    <li><a href="#">HONOURS</a>
+
+												    									<!-- for cse 3RD YR. subjects -HONOURS -->
+												    	<div class="honour">
+												    		<ul>
+												    			<li><a href="#">B.L</a></li>
+
+												    			<li><a href="#">D.S</a></li>
+												    			<li><a href="#">C.S</a></li>
+
+												    		</ul>
+												    		
+												    	</div>
+												    </li>
+													
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">4st YEAR</a></li>
+										
+									</ul>
+								</div>
+							</li>
+
+
+		<!--*** -->					<li><a href="#">E.C.E</a>
+																				<!-- FOR ECE YEARS -->
+
+								<div class="year">
+									<ul>
+
+										<li><a href="#">1st YEAR</a>
+
+																					<!-- FOR ECE- 1st yr. SUbjects -->
+											<div class="subject1">
+												<ul>
+													<!-- <li><a href="./books/physics.html">PHYSICS</a></li> -->
+													<li><a href="{{url_for('physics')}}">PHYSICS</a></li>
+													
+
+													<li><a href="{{url_for('chemistry')}}">CHEMISTY</a></li>
+
+													<li><a href="{{url_for('bee')}}">BEE</a></li>
+													<li><a href="{{url_for('pps')}}">PPS</a></li>
+
+													<li><a href="{{url_for('math')}}">MATH-I</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										<li><a href="#">4st YEAR</a></li>
+										
+									</ul>
+								</div>
+							</li>
+
+																				<!-- FOR M.E YEARS -->
+	<!--**-->				<li><a href="#">M.E</a>
+								<div class="year">
+									<ul>
+
+										<li><a href="#">1st YEAR</a>
+
+																					<!-- FOR ME- 1st yr. SUbjects -->
+											<div class="subject1">
+												<ul>
+													<!-- <li><a href="./books/physics.html">PHYSICS</a></li> -->
+													<li><a href="{{url_for('physics')}}">PHYSICS</a></li>
+													
+
+													<li><a href="{{url_for('chemistry')}}">CHEMISTY</a></li>
+
+													<li><a href="{{url_for('bee')}}">BEE</a></li>
+													<li><a href="{{url_for('pps')}}">PPS</a></li>
+
+													<li><a href="{{url_for('math')}}">MATH-I</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										<li><a href="#">4st YEAR</a></li>
+										
+									</ul>
+								</div>
+							</li>
+
+
+<!--***-->				   <li><a href="#">C.E</a>
+																			<!-- FOR C.E YEARS -->
+								<div class="year">
+									<ul>
+
+										<li><a href="#">1st YEAR</a>
+
+																					<!-- FOR CE- 1st yr. SUbjects -->
+											<div class="subject1">
+												<ul>
+													<!-- <li><a href="./books/physics.html">PHYSICS</a></li> -->
+													<li><a href="{{url_for('physics')}}">PHYSICS</a></li>
+													
+
+													<li><a href="{{url_for('chemistry')}}">CHEMISTY</a></li>
+
+													<li><a href="{{url_for('bee')}}">BEE</a></li>
+													<li><a href="{{url_for('pps')}}">PPS</a></li>
+
+													<li><a href="{{url_for('math')}}">MATH-I</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										<li><a href="#">4st YEAR</a></li>
+										
+									</ul>
+								</div>
+
+							</li>
+
+
+<!--***-->					<li><a href="#">E.E</a>
+																			<!-- FOR E.E YEARS -->
+
+									<div class="year">
+									<ul>
+
+										<li><a href="#">1st YEAR</a>
+
+																					<!-- FOR EE- 1st yr. SUbjects -->
+											<div class="subject1">
+												<ul>
+													<!-- <li><a href="./books/physics.html">PHYSICS</a></li> -->
+													<li><a href="{{url_for('physics')}}">PHYSICS</a></li>
+													
+
+													<li><a href="{{url_for('chemistry')}}">CHEMISTY</a></li>
+
+													<li><a href="{{url_for('bee')}}">BEE</a></li>
+													<li><a href="{{url_for('pps')}}">PPS</a></li>
+
+													<li><a href="{{url_for('math')}}">MATH-I</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										<li><a href="#">4st YEAR</a></li>
+										
+									</ul>
+								</div>
+
+							</li>
+
+						</ul>
+					</div>
+				</li>
+
+				<!-- FOR B.SC -->
+
+				<li><a href="#">B.Sc</a>
+					<div class="sub-menu2">
+						<ul>
+							<li><a href="#">MATHS HONOUR</a>
+																					<!-- for B.SC MATHS years -->
+								<div class="year1">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										
+									</ul>
+								</div>
+
+							</li>
+
+
+							<li><a href="#">PHYS. HONOUR</a>		
+																					<!-- FOR B.SC  PHY. YEARS-->
+								<div class="year1">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										
+										
+									</ul>
+								</div>
+
+							</li>
+
+
+							<li><a href="#">CHEM. HONOUR</a>
+
+																					<!-- FOR b.SC CHEM. YEARS -->
+								<div class="year1">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										
+									</ul>
+								</div>
+
+							</li>
+
+
+							<li><a href="#">P.C.M</a>
+																					<!-- FOR B.SC P.C.M YEARS -->
+								<div class="year1">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										
+									</ul>
+								</div>
+
+							</li>
+
+						</ul>
+					</div>	
+
+				</li>
+
+				<!-- for BBA -->
+
+				<li><a href="#">BBA</a>
+																					<!-- FOR BBA YEARS -->
+
+					<div class="year4">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										<li><a href="#">3st YEAR</a></li>
+
+										
+									</ul>
+					</div>
+
+				</li>
+
+				<!--for M-TECH -->
+
+				<li><a href="#">M-Tech</a>
+					<div class="sub-menu4">
+						<ul>
+							<li><a href="#">C.S.E</a>
+																						<!--FOR M-TECH CSE YEARS -->
+
+								<div class="year2">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="#">E.C.E</a>
+
+																						<!--FOR M-TECH E.C.E YEARS -->
+
+								<div class="year2">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+
+							<li><a href="#">M.E</a>
+
+																						<!--FOR M-TECH M.E YEARS -->
+
+								<div class="year2">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="#">C.E</a>
+
+																						<!--FOR M-TECH C.E YEARS -->
+
+								<div class="year2">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+
+							<li><a href="#">E.E</a>
+
+																						<!--FOR M-TECH E.E YEARS -->
+
+								<div class="year2">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+				</li>
+
+				<!-- for MBA -->
+
+
+				<li><a href="#">MBA</a>
+																						<!-- FOR MBA YEARS -->
+
+					<div class="year5">
+
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+										
+									</ul>
+					</div>
+				</li>
+
+				<!-- for M.SC -->
+
+				<li><a href="#">M.Sc</a>
+					<div class="sub-menu6">
+						<ul>
+
+
+							<li><a href="#">MATHS HONOUR</a>
+																					<!-- FOR M.SC MATHS YEARS --> 
+
+								<div class="year3">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+
+							<li><a href="#">PHYS. HONOUR</a>
+																				 <!-- for m.sc phy. years-->
+								<div class="year3">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+
+
+							<li><a href="#">CHEM. HONOUR</a>
+																					<!-- FOR M.SC  CHEM. YEARS -->
+									<div class="year3">
+									<ul>
+
+										<li><a href="#">1st YEAR</a></li>
+
+										<li><a href="#">2st YEAR</a></li>
+
+									
+									</ul>
+								</div>
+							</li>
+
+						</ul>
+					</div>	
+
+
+				</li>
+
+				<!-- for UPSC -->
+
+
+				<li><a href="#">UPSC</a>
+					<div class="sub-menu7">
+						<ul>
+							<li><a href="#">HISTORY</a>
+
+								<div class="paper1">
+									<!-- for HISTORY -->
+									<ul>
+										<li><a href="{{url_for('india')}}">Indian Art and Culture</a></li>
+
+										<li><a href="{{url_for('modern')}}">Modern History</a></li>
+									</ul>
+
+							</li>
+								<li><a href="#">GEO.</a>
+								<div class="paper2">
+									<!-- for stage-II -->
+									<ul>
+										<li><a href="{{url_for('env')}}">Environment</a></li>
+
+										<li><a href="{{url_for('geoindia')}}">Geo. of India</a></li>
+										<li><a href="{{url_for('atlas')}}">World Atlas</a></li>
+										
+									</ul>
+								</div>
+
+							</li>
+
+						</ul>
+					</div>	
+
+						
+
+				</li>
+
+				<!-- for SSC -->
+
+				<li><a href="#">SSC</a>
+								<!-- FOR SSC EXAM -->
+					<div class="sub-menu8">
+						<ul>
+							<li><a href="#">CHSL</a>
+								<!-- for CHSl exam TIERS-->
+								<div class="exams">
+									<ul>
+										<li><a href="#">TIER-I</a></li>
+
+										<li><a href="#">TIER-II</a></li>
+										<li><a href="#">TIER-III</a></li>
+										
+									</ul>
+								</div>
+
+							</li>
+
+							<li><a href="#">CGL</a>
+								<!-- for CGl exam TIERS-->
+								<div class="exams">
+									<ul>
+										<li><a href="#">TIER-I</a></li>
+
+										<li><a href="#">TIER-II</a></li>
+										<li><a href="#">TIER-III</a></li>
+										<li><a href="#">TIER-IV</a></li>
+										
+									</ul>
+								</div>
+							</li>
+
+							<li><a href="#">CPO</a>
+								<!-- for CPO exam TIERS-->
+								<div class="exams">
+									<ul>
+										<li><a href="#">PAPER-I</a></li>
+
+										<li><a href="#">PST/PET</a></li>
+										<li><a href="#">PAPER-II</a></li>
+										<li><a href="#">DME</a></li>
+										
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

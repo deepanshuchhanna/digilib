@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+        <title>BEE</title>
+      
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+            <style>
+                .myDiv {
+   
+                  background-image: url("../static/images/img/b.png") ;
+                  text-align: center;
+                  height: 100vh;
+                  width: 100vw;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+
+                  object-fit: cover;
+                }
+
+                .btn {
+                  background-color: DodgerBlue;
+                  border: none;
+                  color: white;
+                  padding: 12px 30px;
+                  cursor: pointer;
+                  font-size: 20px;
+                  border-radius: 5px;
+                  box-shadow: 0 2px #999;
+                  display:inline-block;
+
+                }
+                
+                .btn:hover {
+                  background-color: RoyalBlue;
+                
+                }
+
+                .div1 {
+                  background-color: rgba(95, 68, 18, 0.644);
+                  max-width: 50%;
+                  margin-top: 5%;
+                  margin-left: 24%;
+                  color: aliceblue;
+                  /* padding: auto; */
+
+                }
+
+                .div2 {
+
+                  background-color: transparent;
+                  max-width: 20%;
+                  min-height: fit-content;
+                  /* margin: 50px 80px 10px 10px;                */
+                  text-align: center;
+                  margin-left: 40%;
+                  margin-top: 5%;
+                 }
+                </style>
+
+    </head>
+    <body  class="myDiv">
+
+      <div>
+        
+        <span style="font-size: 100px;color: rgb(104, 77, 36);text-decoration-line: underline;">BEE</span>
+        </div>
+
+        <div class="div1">
+          <span  style="font-size: 30px; font-weight: bolder;">ELECTRICAL TECHNOLOGY <br>Volume II</br></span>
+          <br/>
+          <span  style="font-size: 30px; font-weight:normal;">Author: B.L THERAJA</span>
+
+        </div>
+
+      <div class="div2">
+        <a class="btn" href="{{url_for('ebooks')}}">&laquo; <i>Back</i></a>
+        <a class="btn" href="http://localhost/folder/bee.php"> <i class="fa fa-download">Download</i></a>
+      </div>
+                
+    </body>
+</html></a>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>feedback</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+
+<style>
+*{
+  margin: 0px;
+  padding: 2px;
+}
+body
+{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../static/images/6.jpg);
+
+  background-size: 100% 900px;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+}
+
+
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+ul li.active a{
+    background-color: #fff;
+    color: #041203;
+}
+
+
+.container 
+{    
+  border-radius: 5px;    
+  background-color: rgba(245, 245, 245, 0.301) ;    
+  padding: 20px; 
+  height: 550px;
+  width: 550px;
+  border:3px solid rgba(0, 0, 0, 0.315);  
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+.abc:after 
+{    
+  content: "";    
+  display: table;    
+  clear: both;
+  /* border:5px solid;    */
+}
+
+.abd
+{
+  float: left;   
+  width: 35%;    
+  margin-top: 5px;
+  /* color: black; */
+} 
+
+
+.acd 
+{    
+  float: left;    
+  width: 75%;    
+  margin-top: 6px;    
+}
+
+#subject
+{
+	width: 500px;
+	height: 200px;
+
+}   
+
+#ct
+{
+	width: 100px;
+	height: 25px;
+} 
+#name
+{
+	width: 300px;
+	height: 25px;
+	border-radius: 5px;
+}
+
+#sub
+{
+	width: 80px;
+	height: 35px;
+}
+
+
+
+input[type="submit"]
+{
+	/* position: relative; */
+	/* left: 5px; */
+	border-radius: 25px 25px 25px 25px;
+	width: 150px;
+	height: 100px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: #FFA500;
+	
+}
+input[type="submit"]:hover
+{
+	background: #006400;
+}
+
+
+</style>
+
+</head>
+<body>
+	 <ul>
+       
+        <li class="active"><a href="{{url_for('user')}}"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+        <li><a href="{{url_for('newspaper')}}">NEWSPAPERS</a></li>
+        <li><a href="{{url_for('ebooks')}}">E-BOOKS</a></li>
+    
+        <li><a href="{{url_for('about')}}">ABOUT</a></li>
+        
+    <!--  	<li><a href="#">DIGI.CALCULATOR</a></li> -->
+
+        <li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+
+        
+      </ul><br><br>
+
+      <h1 ><font size="30" color="#6B8E23">***</font><font size="30" color="#FFD700">FEEDBACK FORM</font><font size="30" color="#6B8E23">***</font></h1>
+      <div class="container">
+
+
+      	<form action="{{url_for('feedback1')}}" method="post">
+      		<div class="abc">
+
+      				<label><font size="5" color="black" >First Name:&nbsp; </font></label>
+  					<input type="text" name="fname" id="name" placeholder="Enter your First Name" required><br><br>
+
+  					<label><font size="5" color="black">Last Name:&nbsp; </font></label>
+  					<input type="text" name="lname" id="name" placeholder="Enter your Last Name"><br><br>
+
+  			<label>  <font size="5" color="black">Country:&nbsp; &nbsp; &nbsp; </font></label>
+  			<select  name="country" id="ct">
+
+  				<option>INDIA</option>
+  				<option>U.K</option>
+  				<option>JAPAN</option>
+  				<option>CANADA</option>
+		  		<option>ARMENIA</option>																																																																														
+		  	</select>
+		  	<br><br>
+
+
+  			<label><font size="5" color="black">E-mail:&nbsp; &nbsp; &nbsp; &nbsp; </font></label>
+  			<input type="email" name="email" id="name" placeholder="Enter your E-mail" required=""><br><br>
+
+
+        	<label for="feed_back"><font size="30" color="black">FeedBack</font></label> 
+        	<br>
+        	<textarea id="subject" name="fback" placeholder="Write something.." style="color: #000;" ></textarea> <br>
+
+  			<input type="submit" value="Submit" id="sub">
+
+      		</div>
+
+        </form>  
+
+</body>
+</html>

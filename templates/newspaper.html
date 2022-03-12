@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAILY NEWSPAPERS </title>
+
+
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  max-height: 100vh;
+  margin-top: -22px;  
+  /* The image used */
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../static/images/3.jpg");
+  padding: 20px;
+
+  /* Full height */
+  /* height: 138%;  */
+
+  /* Center and scale the image nicely */
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #041203;
+}
+
+.aed .fa
+
+{
+	margin-right: 8px;
+	
+}
+
+
+
+.btn {
+  background-color: rgba(245, 245, 245, 0.5);;
+  border: none;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  width: 280px;
+  letter-spacing: 0.2px;
+  border-radius: 30px;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.btn:hover {opacity: 0.6}
+
+
+
+.title{
+	margin-top: 40px;
+	
+}
+
+
+
+
+</style>
+</head>
+<body>
+	<div class="aed">
+
+		<ul>
+
+				<li class="active"><a href="{{url_for('user')}}"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+				<li><a href="{{url_for('newspaper')}}">NEWSPAPERS</a></li>
+				<li><a href="{{url_for('ebooks')}}">E-BOOKS</a></li>
+				<li><a href="{{url_for('about')}}">ABOUT</a></li>
+
+			<!--	<li><a href="#">DIGI.CALCULATOR</a></li> -->
+
+				<li><a href="{{url_for('feedback')}}">FEEDBACK</a></li>
+
+				
+		</ul>
+	</div>
+	<br><br>
+	<div class="title">
+		<h1 ><font size="7" color="CC9966" >DAILY NEWSPAPERS</font></h1>
+	</div>
+      		<button  class="btn " ><a href="https://www.newspaperpdf.online/thehindu.php"  style="color:#000"> THE HINDU</a></button><br><br>
+     
+			<button class="btn"><a href="https://www.newspaperpdf.online/hindustan_times.php"  style="color:#000">HINDUSTAN TIMES</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/times_of_india.php" style="color:#000">THE TIMES OF INDIA</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/indian_express.php" style="color:#000">INDIAN EXPRESS</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/dainik_jagran.php" style="color:#000">DAINIK JAGRAN</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/jansatta.php" style="color:#000">JANSATTA</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/economic_times.php" style="color:#000">ECONOMIC TIMES</a></button><br><br>
+
+			<button class="btn"><a href="https://www.newspaperpdf.online/financial_express.php" style="color:#000">FINANCIAL EXPRESS</a></button>
+
+
+</body>
+</html>
